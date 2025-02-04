@@ -2,13 +2,26 @@
   "name": "natours",
   "version": "1.0.0",
   "description": "Learning node , express and mongoDb",
-  "main": "index.js",
+  "main": "./starter/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./starter/server.js",
+    "start:prod": "cross-env NODE_ENV=production nodemon ./starter/server.js",
+    "debug":"ndb ./starter/server.js"
   },
   "author": "Semih",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.21.2"
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.9.5",
+    "slugify": "^1.6.6",
+    "validator": "^13.12.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  },
+  "engines": {
+    "node": ">= 14.x"
   }
 }
