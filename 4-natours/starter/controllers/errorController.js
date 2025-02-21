@@ -25,12 +25,20 @@ const handleDuplicateFieldsDB = err => {
     return new AppError("Duplicate tour name found.", 400);
 };
 
-const handleValidationErrorDB = err => {
+const handleValidationErrorDB = (err) => {
     const errors = Object.values(err.errors).map(el => el.message)
 
     const message = `Invalid Validation Error: ${errors.join(', ')}`;
     return new AppError(message, 400);
 };
+
+const handleJsonWebTokenError = () => { 
+    return new AppError('Invalid token. Please log in again!', 401);
+}
+
+const handleTokenExpiredError = () => {
+    return new AppError('Your token has expired! Please log in again.', 401);
+}
 
 
 
@@ -81,6 +89,8 @@ module.exports = (err,req,res,next) => {
         if(error.name === 'CastError') error = handleCastErrorDB(error)
         if(error.code === 11000) error = handleDuplicateFieldsDB(error)
         if(error.name === 'ValidationError') error = handleValidationErrorDB(error)
+        if(error.name === 'JsonWebTokenError') error = handleJsonWebTokenError()
+        if(error.name === 'TokenExpiredError') error = handleTokenExpiredError()
 
         sendErrorProd(error, res);
     }

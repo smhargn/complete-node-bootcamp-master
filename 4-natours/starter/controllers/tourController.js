@@ -72,7 +72,6 @@ exports.getAllTours = catchAsync(async (req,res,next) => {
         // 5 ) Pagination
 
 
-        console.log(req.query);
 
 
         //EXECUTE QUERY
