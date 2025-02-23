@@ -1,11 +1,25 @@
 const express = require('express');
 const tourController = require('./../controllers/tourController');
 const authController = require('./../controllers/authController');
+//const reviewController = require('./../controllers/reviewController');
+const reviewRouter = require('./../routes/reviewRoutes');
 
 
 const router = express.Router();
 
 //router.param('id', tourController.checkID);
+
+// POST /tour/23123/reviews
+// GET /tour/23123/reviews
+// GET /tour/23123/reviews/234234
+
+// router.route('/:tourId/reviews')
+//     .post(authController.protect,
+//     authController.restrictTo('user'),
+//     reviewController.createReview
+//     );
+
+router.use('/:tourId/reviews',reviewRouter)
 
 
 // Create a checkBody middleware
@@ -34,5 +48,15 @@ router
         authController.restrictTo('admin','lead-guide'),
         tourController.deleteTour);
 
+
+// POST /tour/23123/reviews
+// GET /tour/23123/reviews
+// GET /tour/23123/reviews/234234
+
+// router.route('/:tourId/reviews')
+//     .post(authController.protect,
+//     authController.restrictTo('user'),
+//     reviewController.createReview
+//     );
 
 module.exports = router;
