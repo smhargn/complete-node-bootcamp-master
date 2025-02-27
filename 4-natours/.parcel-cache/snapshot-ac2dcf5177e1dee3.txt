@@ -23,7 +23,7 @@
 109C:\Users\Semih\Desktop\complete-node-bootcamp-master\4-natours\node_modules\mongodb\src\operations\indexes.ts133824543144666398 0
 100C:\Users\Semih\Desktop\complete-node-bootcamp-master\4-natours\starter\public\img\tours\tour-6-2.jpg133755454870000000 0
 109C:\Users\Semih\Desktop\complete-node-bootcamp-master\4-natours\node_modules\@parcel\core\src\public\Target.js133851634986954318 0
-70C:\Users\Semih\Desktop\complete-node-bootcamp-master\4-natours\starter133851647834773452 1
+70C:\Users\Semih\Desktop\complete-node-bootcamp-master\4-natours\starter133851661594321004 1
 111C:\Users\Semih\Desktop\complete-node-bootcamp-master\4-natours\node_modules\mongodb\src\cmap\connection_pool.ts133824543144237340 0
 95C:\Users\Semih\Desktop\complete-node-bootcamp-master\4-natours\node_modules\pug-walk\HISTORY.md133849840426621985 0
 94C:\Users\Semih\Desktop\complete-node-bootcamp-master\4-natours\node_modules\with\tsconfig.json133849840425511973 0
@@ -125,7 +125,7 @@
 113C:\Users\Semih\Desktop\complete-node-bootcamp-master\4-natours\node_modules\serialize-to-js\lib\internal\utils.js133851501792666671 0
 107C:\Users\Semih\Desktop\complete-node-bootcamp-master\4-natours\node_modules\caniuse-lite\data\regions\SR.js133851634991734390 0
 129C:\Users\Semih\Desktop\complete-node-bootcamp-master\4-natours\node_modules\@parcel\runtime-js\lib\helpers\browser\wasm-loader.js133851634984614312 0
-75C:\Users\Semih\Desktop\complete-node-bootcamp-master\4-natours\package.json133851647856465715 0
+75C:\Users\Semih\Desktop\complete-node-bootcamp-master\4-natours\package.json133851661592101351 0
 104C:\Users\Semih\Desktop\complete-node-bootcamp-master\4-natours\node_modules\promise\setimmediate\core.js133849840425271997 0
 110C:\Users\Semih\Desktop\complete-node-bootcamp-master\4-natours\node_modules\pug-error\lib\tsconfig.tsbuildinfo133849840425901992 0
 111C:\Users\Semih\Desktop\complete-node-bootcamp-master\4-natours\node_modules\caniuse-lite\data\features\xhtml.js133851634992694662 0
@@ -145,7 +145,7 @@
 82C:\Users\Semih\Desktop\complete-node-bootcamp-master\4-natours\starter\.prettierrc133755454870000000 0
 112C:\Users\Semih\Desktop\complete-node-bootcamp-master\4-natours\node_modules\caniuse-lite\dist\unpacker\region.js133851634991384328 0
 109C:\Users\Semih\Desktop\complete-node-bootcamp-master\4-natours\after-section-06\public\img\tours\tour-3-3.jpg133755454870000000 0
-77C:\Users\Semih\Desktop\complete-node-bootcamp-master\4-natours\starter\app.js133851647834743113 0
+77C:\Users\Semih\Desktop\complete-node-bootcamp-master\4-natours\starter\app.js133851661594271168 0
 101C:\Users\Semih\Desktop\complete-node-bootcamp-master\4-natours\node_modules\pug-code-gen\package.json133849840426581996 0
 123C:\Users\Semih\Desktop\complete-node-bootcamp-master\4-natours\node_modules\@swc\helpers\_\_is_native_function\package.json133851634988234328 0
 92C:\Users\Semih\Desktop\complete-node-bootcamp-master\4-natours\node_modules\cookie\README.md133822254145575368 0
@@ -168,7 +168,7 @@
 100C:\Users\Semih\Desktop\complete-node-bootcamp-master\4-natours\starter\controllers\tourController.js133849753721969207 0
 152C:\Users\Semih\Desktop\complete-node-bootcamp-master\4-natours\node_modules\msgpackr-extract\node_modules\node-gyp-build-optional-packages\build-test.js133851634984584325 0
 102C:\Users\Semih\Desktop\complete-node-bootcamp-master\4-natours\node_modules\react-refresh\package.json133851634982404327 0
-81C:\Users\Semih\Desktop\complete-node-bootcamp-master\4-natours\starter\app.js.map133851647834773452 0
+81C:\Users\Semih\Desktop\complete-node-bootcamp-master\4-natours\starter\app.js.map133851661594310984 0
 101C:\Users\Semih\Desktop\complete-node-bootcamp-master\4-natours\node_modules\validator\lib\isBase32.js133827985595566478 0
 115C:\Users\Semih\Desktop\complete-node-bootcamp-master\4-natours\node_modules\@parcel\node-resolver-core\lib\index.js133851634981664327 0
 82C:\Users\Semih\Desktop\complete-node-bootcamp-master\4-natours\starter\controllers133849911416070329 1
@@ -249,7 +249,7 @@
 91C:\Users\Semih\Desktop\complete-node-bootcamp-master\4-natours\starter\routes\userRoutes.js133848190653250551 0
 114C:\Users\Semih\Desktop\complete-node-bootcamp-master\4-natours\node_modules\whatwg-url\lib\URLSearchParams-impl.js133824543134419777 0
 124C:\Users\Semih\Desktop\complete-node-bootcamp-master\4-natours\node_modules\lmdb\dependencies\lmdb\libraries\liblmdb\mtest.c133851634985494329 0
-85C:\Users\Semih\Desktop\complete-node-bootcamp-master\4-natours\starter\views\base.pug133851646156718740 0
+85C:\Users\Semih\Desktop\complete-node-bootcamp-master\4-natours\starter\views\base.pug133851650601801135 0
 102C:\Users\Semih\Desktop\complete-node-bootcamp-master\4-natours\node_modules\validator\lib\isISO6346.js133827985596586503 0
 107C:\Users\Semih\Desktop\complete-node-bootcamp-master\4-natours\node_modules\caniuse-lite\data\regions\PS.js133851634991304342 0
 92C:\Users\Semih\Desktop\complete-node-bootcamp-master\4-natours\node_modules\msgpackr-extract133851634982074324 1
@@ -313,7 +313,7 @@
 96C:\Users\Semih\Desktop\complete-node-bootcamp-master\4-natours\node_modules\browserslist\LICENSE133851634980474330 0
 111C:\Users\Semih\Desktop\complete-node-bootcamp-master\4-natours\node_modules\@parcel\package-manager\src\Yarn.js133851634984054321 0
 93C:\Users\Semih\Desktop\complete-node-bootcamp-master\4-natours\node_modules\ee-first\index.js133822254143475388 0
-89C:\Users\Semih\Desktop\complete-node-bootcamp-master\4-natours\starter\public\js\index.js133851645916037435 0
+89C:\Users\Semih\Desktop\complete-node-bootcamp-master\4-natours\starter\public\js\index.js133851653294865245 0
 112C:\Users\Semih\Desktop\complete-node-bootcamp-master\4-natours\node_modules\side-channel-map\.github\FUNDING.yml133822254144385387 0
 96C:\Users\Semih\Desktop\complete-node-bootcamp-master\4-natours\node_modules\mongoose\SECURITY.md133824543143102616 0
 111C:\Users\Semih\Desktop\complete-node-bootcamp-master\4-natours\after-section-09\dev-data\data\tours-simple.json133755454870000000 0
@@ -803,7 +803,7 @@
 95C:\Users\Semih\Desktop\complete-node-bootcamp-master\4-natours\starter\dev-data\data\users.json133755454870000000 0
 104C:\Users\Semih\Desktop\complete-node-bootcamp-master\4-natours\node_modules\es-define-property\README.md133822254144155430 0
 107C:\Users\Semih\Desktop\complete-node-bootcamp-master\4-natours\node_modules\resolve-protobuf-schema\LICENSE133851501794282417 0
-100C:\Users\Semih\Desktop\complete-node-bootcamp-master\4-natours\starter\controllers\authController.js133851591662953742 0
+100C:\Users\Semih\Desktop\complete-node-bootcamp-master\4-natours\starter\controllers\authController.js133851650233651435 0
 99C:\Users\Semih\Desktop\complete-node-bootcamp-master\4-natours\node_modules\token-stream\HISTORY.md133849840424725007 0
 93C:\Users\Semih\Desktop\complete-node-bootcamp-master\4-natours\node_modules\potpack\README.md133851501795456693 0
 108C:\Users\Semih\Desktop\complete-node-bootcamp-master\4-natours\after-section-13\public\img\users\user-14.jpg133755454870000000 0

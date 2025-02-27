@@ -1,8 +1,8 @@
-
 /* eslint-disable */
-console.log("Saa")
+import axios from 'axios'
+import { showAlert } from './alert'
 
-const login = async (email,password) => {
+export const login = async (email,password) => {
     console.log("Login")
     try {
     const res = await axios({
@@ -15,7 +15,7 @@ const login = async (email,password) => {
     });
 
     if(res.data.status === 'success') {
-        alert('logged in successfully')
+        showAlert('success','logged in successfully')
         window.setTimeout(() => {
             location.assign('/');
         },1500)
@@ -23,19 +23,7 @@ const login = async (email,password) => {
 
     console.log(res);
 } catch (err) {
-    console.log(err.response.data.message);
+    showAlert('error',err.response.data.message);
     
 }
-
 }
-
-document.querySelector('form.form').addEventListener('submit', e => {
-    e.preventDefault();
-
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
-
-    login(email,password);
-    
-
-})
