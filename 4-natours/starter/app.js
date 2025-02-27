@@ -6,6 +6,7 @@ const helmet = require('helmet');
 const mongoSanitize = require('express-mongo-sanitize');
 const xss = require('xss-clean');
 const hpp = require('hpp');
+const cookieParser = require('cookie-parser');
 
 const tourRouter = require('./routes/tourRoutes');
 const userRouter = require('./routes/userRoutes');
@@ -43,6 +44,7 @@ app.use('/api',limiter);
 
 
 app.use(express.json({ limit : '10kb'}));
+app.use(cookieParser());
 
 // Data sanitization against NoSQL query injection
 app.use(mongoSanitize());
@@ -79,8 +81,22 @@ app.use(hpp({
 app.use((req,res,next) => {
     req.requestTime = new Date().toISOString();
     //console.log(req.headers);
+    console.log(req.cookies);
     next();
 
+});
+
+app.use((req, res, next) => {
+    res.setHeader("Content-Security-Policy", "script-src 'self' https://api.mapbox.com; worker-src 'self' blob:;");
+    next();
+});
+
+app.use((req, res, next) => {
+    res.setHeader(
+        "Content-Security-Policy",
+        "script-src 'self' https://unpkg.com https://api.mapbox.com"
+    );
+    next();
 });
 
 // app.get('/', (req, res) => {

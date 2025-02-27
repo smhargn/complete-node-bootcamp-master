@@ -70,7 +70,7 @@ exports.login = catchAsync (async (req, res, next) => {
 
 
     // 3) Everything ok send token to client
-    createSendToken(user,201,res);
+    createSendToken(user,200,res);
 });
 
 exports.protect = catchAsync(async (req,res,next) => {
@@ -78,6 +78,8 @@ exports.protect = catchAsync(async (req,res,next) => {
     // 1 ) Getting token and check it's there
     if (req.headers.authorization && req.headers.authorization.startsWith('Bearer')) {
         token = req.headers.authorization.split(' ')[1];
+    }else if (req.cookies.jwt) {
+        token = req.cookies.jwt;
     }
 
     console.log(token)
@@ -112,6 +114,33 @@ exports.protect = catchAsync(async (req,res,next) => {
    // Grant Access
     req.user = currentUser;
     next();
+    
+});
+
+// Only for rendered pages,no errors!
+exports.isLoggedIn = catchAsync(async (req,res,next) => {
+
+    if (req.cookies.jwt) {
+        // Verify Token
+        const decoded = await promisify(jwt.verify) (req.cookies.jwt, process.env.JWT_SECRET);
+
+        const currentUser = await User.findById(decoded.id);
+
+        if(!currentUser) {
+            return next();
+        }
+
+        if(await currentUser.changedPasswordAfter(decoded.iat)) {
+            return next();
+            
+        };
+
+        // there is a logged in
+        res.locals.user = currentUser;
+        next();
+    }else {
+        next();
+    }
     
 });
 
