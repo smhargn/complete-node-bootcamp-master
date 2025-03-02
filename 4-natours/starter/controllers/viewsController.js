@@ -1,5 +1,7 @@
 const Tour = require('../models/tourModel');
+const User = require('../models/userModel');
 const catchAsync = require('../utils/catchAsync');
+const AppError = require('./../utils/appError');
 
 exports.getOverview =  catchAsync(async(req, res) => {
     console.log("Over Selam")
@@ -25,6 +27,10 @@ exports.getTour = catchAsync(async (req, res,next) => {
             fields:'review rating user'
         }
     )
+
+    if(!tour) {
+        return next(new AppError('Tour not found with that name', 404));
+    }
     // 1) Get the data, for the request tour
     //const tour = Tour.findOne(req.params.tour.slug)
     // 2) Build template
@@ -41,3 +47,47 @@ exports.getLoginForm = (req,res) => {
         title: 'Login to account'
     });
 }
+
+exports.getAccount = (req, res) => {
+    res.status(200).render('account',{
+        title: 'Your Account'
+    });
+}
+
+exports.updateUserData = catchAsync(async (req, res) => {
+    const updatedUser = await User.findByIdAndUpdate(req.user.id, {
+
+        name: req.body.name,
+        email: req.body.email
+
+    },{
+        new: true,
+        runValidators: true
+    });
+
+    res.status(200).render('account',{
+        title: 'Your Account',
+        user:updatedUser
+    });
+
+});
+
+// exports.updateUserPassword = catchAsync(async (req,res) => {
+//     const updatedUser = await User.findByIdAndUpdate(req.user.id, {
+
+//         passwordCurrent : req.body.password-current,
+//         password : req.body.password,
+//         passwordConfirm : req.body.password-confirm
+
+//     },{
+//         new: true,
+//         runValidators: true
+//     });
+
+//     res.status(200).render('account',{
+//         title: 'Your Account',
+//         user:updatedUser
+//     });
+
+
+// })
