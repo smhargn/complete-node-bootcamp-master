@@ -11,6 +11,7 @@ const cookieParser = require('cookie-parser');
 const tourRouter = require('./routes/tourRoutes');
 const userRouter = require('./routes/userRoutes');
 const reviewRouter = require('./routes/reviewRoutes');
+const bookingRouter = require('./routes/bookingRoutes');
 const viewRouter = require('./routes/viewRoutes');
 
 const AppError = require('./utils/appError');
@@ -25,7 +26,20 @@ app.set('views', path.join(__dirname, 'views'));
 //console.log(process.env.NODE_ENV);
 app.use(express.static(path.join(__dirname, 'public')));
 // Set security HTTP headers
-app.use(helmet());
+// app.use(helmet());
+
+// app.use(helmet.contentSecurityPolicy({
+//     directives: {
+//       defaultSrc: ["'self'"],
+//       styleSrc: ["'self'", "https://fonts.googleapis.com", "https://api.mapbox.com"],
+//       scriptSrc: ["'self'", "https://js.stripe.com", "https://unpkg.com", "https://api.mapbox.com"],
+//       frameSrc: ["'self'", "https://js.stripe.com"],
+//       workerSrc: ["'self'"],
+//       connectSrc: ["'self'", "ws://127.0.0.1:52039"],
+//     }
+// }));
+
+  
 
 
 if(process.env.NODE_ENV === 'development'){
@@ -86,18 +100,7 @@ app.use((req,res,next) => {
 
 });
 
-app.use((req, res, next) => {
-    res.setHeader("Content-Security-Policy", "script-src 'self' https://api.mapbox.com; worker-src 'self' blob:;");
-    next();
-});
 
-app.use((req, res, next) => {
-    res.setHeader(
-        "Content-Security-Policy",
-        "script-src 'self' https://unpkg.com https://api.mapbox.com"
-    );
-    next();
-});
 
 // app.get('/', (req, res) => {
 //     res.status(200).json({message : 'Hello, World!',app : 'Natours'});
@@ -114,6 +117,7 @@ app.use('/', viewRouter);
 app.use('/api/v1/tours', tourRouter);
 app.use('/api/v1/users', userRouter);
 app.use('/api/v1/reviews', reviewRouter);
+app.use('/api/v1/bookings', bookingRouter);
 
 app.all('*', (req, res, next) => {
     // res.status(404).json({
