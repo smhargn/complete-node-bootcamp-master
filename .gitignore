@@ -6,3 +6,8 @@ node_modules
 config.env
 4-natours/config.env4-natours/config.env
 mapbox.js
+./node_modules
+.cache/
+./cache/
+4-natours/.cache/
+4-natours/cache/

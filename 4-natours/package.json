@@ -9,13 +9,14 @@
     "start:prod": "cross-env NODE_ENV=production nodemon ./starter/server.js",
     "debug": "ndb ./starter/server.js",
     "watch:js": "parcel watch ./starter/public/js/index.js --out-dir ./starter/public/js --out-file bundle.js",
-    "build:js": "parcel build ./starter/public/js/index.js --dist-dir ./starter/public/js/ --no-source-maps"
+    "build:js": "parcel build ./starter/public/js/index.js --out-dir ./starter/public/js --out-file bundle.js"
   },
   "author": "Semih",
   "license": "ISC",
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
     "axios": "^1.8.1",
+    "compression": "^1.8.0",
     "cookie-parser": "^1.4.7",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
